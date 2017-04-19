@@ -16,9 +16,9 @@ public class DbConnection {
     public static Connection DbConnection;
     public Connection connection;
     String driverName = "com.mysql.jdbc.Driver";
-    String url = "jdbc:mysql://localhost:3306/forum";
+    String url = "jdbc:mysql://localhost:3306/project";
     String user = "root";
-    String dbpsw = "admin";
+    String dbpsw = "root";
     public DbConnection() throws ClassNotFoundException, SQLException{
     try{
     Class.forName(driverName);
