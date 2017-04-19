@@ -43,39 +43,26 @@ public class register extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String fullname = request.getParameter("fullname");
             String email = request.getParameter("email");
             String pass1 = request.getParameter("pass1");
             String pass2 = request.getParameter("pass2");
+            String nickname = request.getParameter("nickname");
+            int phone = request.getParameter("phone");
             String gender = request.getParameter("optionsRadios");
             String check = request.getParameter("check");
             DbConnection conn = new DbConnection();
             Statement stm = conn.connection.createStatement();
-            //String insert = "insert into users(fullname,email,password,role,gender) values('"+fullname+"','"+email+"','"+pass1+"','member','"+gender+"')";
-            
             if(pass1.equals(pass2)){
                 if(check==null || new checkvalid().check(email)==false){
                 response.sendRedirect("signup.jsp");}
-                else{// stm.executeUpdate(insert);
-                
+                else{     
                 pass1= MD5.encryptMD5(pass1);
                 out.print(pass1);
-                conn.connection.createStatement().executeUpdate("insert into users(fullname,email,password,role,gender) values('"+fullname+"','"+email+"','"+pass1+"','member','"+gender+"')");
+                conn.connection.createStatement().executeUpdate("insert into users(email,password,phone,nickname,role,gender) values('"+email+"','"+pass1+"','"+phone+"','"+nickname+"','member','"+gender+"')");
                 response.sendRedirect("login.html");
             }
             }
-            else response.sendRedirect("signup.jsp");
-            //out.println("<head></head>"
-                    //+ "<body>"
-                    //+ fullname
-                    //+ email
-                    //+ pass1
-                    //+ pass2
-                    //+ gender+
-                   // check+
-                    //"insert into account (id,password) values("+email+","+pass1+")"+
-                    //"</body>");
-            
+            else response.sendRedirect("signup.jsp");          
         }
     }
 
