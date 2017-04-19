@@ -1,3 +1,7 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="DbConnection.DbConnection"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -19,18 +23,16 @@
                 String idindata = re.getString(2);
                 String passindata = re.getString(3);
                 for (int i=0;i<c.length;i++){
-                    String username = AES.encrypt(c[i].getName());
-                    String password = AES.encrypt(c[i].getValue());
-                   // username = AES.encrypt(username);
-                   // password = AES.encrypt(password);
-                if (idindata.equals(AES.decrypt(username))&& passindata.equals(AES.decrypt(password)))
+                    String username = c[i].getName();
+                    String password = c[i].getValue();
+                if (idindata.equals(username)&& passindata.equals(password))
                     {logined = true;
                      s.setAttribute("id", iduser);
                      break;}
                     }
                 }
             if(logined==true)
-            {response.sendRedirect("RegisterForm.jsp");}
+            {response.sendRedirect("Hompage.jsp");}
             else
             out.println("");
             }
