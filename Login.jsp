@@ -40,12 +40,13 @@
         <div id="h1">M</div>
         <div class="login">
             <form action="cookie" method="post">
-                <div class="row"><div class="col4">
+                <div>
+                    <div>
                         <input type="text" id="username" name="id" placeholder="User name"/>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col4">
+                <div>
+                    <div>
                         <input type="text" id="password" name="pass" placeholder="Password" onkeyup="CheckPasswordStrength(this.value)" />
                         <span id="password_strength"></span>
                         <script type="text/javascript">
@@ -73,10 +74,10 @@
                                     case 5:strength = "Very Strong";color = "darkgreen";break;}
                                     password_strength.innerHTML = strength;
                                     password_strength.style.color = color;}
-                                                            </script>
+                         </script>
                     </div>
                 </div>
-                <div class="row">
+                <div>
                     <button type="submit">Log in</button>
                 </div>
             </form>
