@@ -42,12 +42,12 @@
             <form action="cookie" method="post">
                 <div>
                     <div>
-                        <input type="text" id="username" name="id" placeholder="User name"/>
+                        <input type="text" id="input" name="id" placeholder="User name"/>
                     </div>
                 </div>
                 <div>
                     <div>
-                        <input type="text" id="password" name="pass" placeholder="Password" onkeyup="CheckPasswordStrength(this.value)" />
+                        <input type="text" id="input" name="pass" placeholder="Password" onkeyup="CheckPasswordStrength(this.value)" />
                         <span id="password_strength"></span>
                         <script type="text/javascript">
                             function CheckPasswordStrength(password) {
