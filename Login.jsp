@@ -37,7 +37,7 @@
             out.println("");
             }
         %>
-        <div id="h1">M</div>
+        <div id="logo">M</div>
         <div class="login">
             <form action="cookie" method="post">
                 <div>
