@@ -35,7 +35,7 @@ button{
 button:hover{
     opacity: 0.8;
 }
-#h1{
+#logo{
     border-radius: 100%;
     text-align: center;
     border: solid 5px;
