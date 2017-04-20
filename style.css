@@ -6,14 +6,7 @@
     padding: 3% 3% 3% 3%;
     margin: 0% 35% 10% 35%;
 }
-#password{
-    width: 320px;
-    height: 50px;
-    border: solid 1px;
-    border-radius: 30px 30px;
-    margin-bottom: 10px;
-}
-#username{
+#input{
     width: 320px;
     height: 50px;
     border: solid 1px;
