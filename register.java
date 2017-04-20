@@ -47,22 +47,21 @@ public class register extends HttpServlet {
             String pass1 = request.getParameter("pass1");
             String pass2 = request.getParameter("pass2");
             String nickname = request.getParameter("nickname");
-            int phone = request.getParameter("phone");
+            String phone = request.getParameter("phone");
             String gender = request.getParameter("optionsRadios");
             String check = request.getParameter("check");
             DbConnection conn = new DbConnection();
             Statement stm = conn.connection.createStatement();
             if(pass1.equals(pass2)){
                 if(check==null || new checkvalid().check(email)==false){
-                response.sendRedirect("signup.jsp");}
+                response.sendRedirect("Register.jsp");}
                 else{     
                 pass1= MD5.encryptMD5(pass1);
-                out.print(pass1);
-                conn.connection.createStatement().executeUpdate("insert into users(email,password,phone,nickname,role,gender) values('"+email+"','"+pass1+"','"+phone+"','"+nickname+"','member','"+gender+"')");
-                response.sendRedirect("login.html");
+                conn.connection.createStatement().executeUpdate("insert into users(email,password,phone,nickname,gender,role) values('"+email+"','"+pass1+"','"+phone+"','"+nickname+"','"+gender+"','member')");
+                response.sendRedirect("Login.jsp");
             }
             }
-            else response.sendRedirect("signup.jsp");          
+            else response.sendRedirect("Register.jsp");          
         }
     }
 
