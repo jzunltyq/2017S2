@@ -1,34 +1,41 @@
-              <form action="register" method="POST">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>JSP Page</title>
+    </head>
+    <body>
+            <form action="register" method="POST">
                 <table>
                     <tbody>
                         <tr>                         
                           <td>
-                            <input type="text" name="fullname" id="inputFullName" placeholder="Your Full Name Here">
+                            <input type="text" name="fullname" id="input" placeholder="Your Full Name Here">
                           </td>
                         </tr>
                         <tr>
                         <td>
-                          <input type="email" name="email" id="exampleInputEmail1" placeholder="Email">
+                          <input type="email" name="email" id="input" placeholder="Email">
                           </td>
                         </tr>
                         <tr>
                           <td>
-                          <input type="password" name="pass1" id="exampleInputPassword1" placeholder="Password">
+                          <input type="password" name="pass1" id="input" placeholder="Password">
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <input type="password" name="pass2" id="reinputPassword" placeholder="Type password again">
+                            <input type="password" name="pass2" id="input" placeholder="Type password again">
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <input type="text" name="phone" placeholder="Your phone number">
+                            <input type="text" name="phone" id="input" placeholder="Your phone number">
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            <input type="text" name="nickname" placeholder="Choose your display name">
+                            <input type="text" name="nickname" id="input" placeholder="Choose your display name">
                           </td>
                         </tr>
                         <tr>
@@ -59,3 +66,6 @@
                     </tbody>
                 </table>
             </form>
+        
+    </body>
+</html>
